@@ -25,7 +25,7 @@
     "@aws-amplify/storage": "^1.1.0",
     "@aws-amplify/ui": "^1.0.23",
     "aws-amplify-angular": "^3.0.11",
-    "fsevents": "^2.0.7",
+    "fsevents": "2.0.9",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
