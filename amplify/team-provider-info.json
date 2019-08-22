@@ -4,11 +4,11 @@
             "AuthRoleName": "amplify-ml-app-dev-20190815204439-authRole",
             "UnauthRoleArn": "arn:aws:iam::664371068953:role/amplify-ml-app-dev-20190815204439-unauthRole",
             "AuthRoleArn": "arn:aws:iam::664371068953:role/amplify-ml-app-dev-20190815204439-authRole",
-            "Region": "ap-northeast-1",
+            "Region": "us-east-1",
             "DeploymentBucketName": "amplify-ml-app-dev-20190815204439-deployment",
             "UnauthRoleName": "amplify-ml-app-dev-20190815204439-unauthRole",
             "StackName": "amplify-ml-app-dev-20190815204439",
-            "StackId": "arn:aws:cloudformation:ap-northeast-1:664371068953:stack/amplify-ml-app-dev-20190815204439/e16e7b90-bf94-11e9-a37b-065ce9d23304"
+            "StackId": "arn:aws:cloudformation:us-east-1:664371068953:stack/amplify-ml-app-dev-20190815204439/e16e7b90-bf94-11e9-a37b-065ce9d23304"
         },
         "categories": {
             "auth": {
