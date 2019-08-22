@@ -1,0 +1,42 @@
+<div class="form-body">
+  <form autocomplete="off" [formGroup]="createForm">
+    <div>
+      <div class="row">
+        <div class="column translation-input">
+          <textarea formControlName="translateField" value="write to translate" autocomplete="off"></textarea>
+        </div>
+        <div class="column translation-output">
+          <textarea readonly autocomplete="off">{{translation1}}</textarea>
+        </div>
+      </div>
+      <select [ngClass]="detectedClass" formControlName="sourceLanguage" [(ngModel)]="selectedSource" (change)="onChange($event.target.value)">
+        <option *ngFor="let sl of sourceLanguages" [ngValue]="sl">{{sl.name}}</option>
+      </select>
+      <select formControlName="targetLanguage" [(ngModel)]="selectedTarget">
+          <option *ngFor="let tl of targetLanguages" [ngValue]="tl">{{tl.name}}</option>
+        </select>
+      <button type="button" (click)="translate()" [disabled]="createForm.get('translateField').value.length===0 || disabledInput">Translate</button>
+      <button type="button" (click)="detectLanguage()" [disabled]="createForm.get('translateField').value.length===0 || disabledInput">Detect Language</button>
+    </div>
+    <div>
+      <div class="row">
+        <div style="width: 100%;">
+          <textarea class="xl" formControlName="speechField" value="write to translate" autocomplete="off"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <select formControlName="speechLanguage" [(ngModel)]="selectedSpeech" (change)="onSpeechChange()">
+          <option *ngFor="let l of speechLanguages" [ngValue]="l">{{l.name}}</option>
+        </select>
+        <select formControlName="voice" [(ngModel)]="selectedVoice">
+          <option *ngFor="let v of voicesList" [ngValue]="v">{{v}}</option>
+        </select>
+        <select formControlName="speed" [(ngModel)]="selectedSpeed" (change)="onSpeedChange()">
+          <option *ngFor="let v of speedsList" [ngValue]="v.id">{{v.name}}</option>
+        </select>
+        <button type="button" (click)="textToSpeech()" [disabled]="createForm.get('speechField').value.length===0 || disableSpeech">Listen</button>
+        <button type="button" (click)="stop()" [disabled]="!enableStop">Stop</button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,18 @@
+<div class="app-body">
+  <form autocomplete="off" [formGroup]="createForm">
+    <input #fileInput type="file" formControlName="file" name="file" id="file" class="inputfile" (change)="addFile($event)" />
+    <label for="file">Find Keanu!</label>
+    <div class="result">
+      {{ resultMessage }}
+      <div *ngIf="showResult">
+        <img *ngIf="keanuFound" class="thumbnail-image" src="assets/success.png" />
+        <img *ngIf="!keanuFound" class="thumbnail-image" src="assets/fail.png" />
+      </div>
+      <div *ngIf="celebrities.length>0">
+        <div *ngFor="let e of celebrities">
+          <a href="http://{{e.metadata.urls[0]}}" target="_blank">{{e.metadata.name || 'Not found'}}</a>
+        </div>
+      </div>
+    </div>
+  </form> 
+</div>

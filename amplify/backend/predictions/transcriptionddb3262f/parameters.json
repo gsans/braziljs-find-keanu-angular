@@ -1,0 +1,13 @@
+{
+    "resourceName": "transcriptionddb3262f",
+    "convertPolicyName": "transcriptionPolicyddb3262f",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "convertType": "transcription",
+    "language": "en-GB",
+    "access": "authAndGuest"
+}

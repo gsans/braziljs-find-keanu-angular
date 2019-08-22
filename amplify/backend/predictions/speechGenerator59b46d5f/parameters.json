@@ -1,0 +1,14 @@
+{
+    "resourceName": "speechGenerator59b46d5f",
+    "convertPolicyName": "speechGeneratorPolicy59b46d5f",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "convertType": "speechGenerator",
+    "language": "en-GB",
+    "voice": "Emma",
+    "access": "authAndGuest"
+}
